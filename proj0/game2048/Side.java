@@ -22,6 +22,10 @@ public enum Side {
      *  to compute the result of tilting the board in any particular
      *  direction. */
 
+    /**
+    *
+    * */
+
     NORTH(0, 0, 0, 1), EAST(0, 1, 1, 0), SOUTH(1, 1, 0, -1),
     WEST(1, 0, -1, 0);
 
@@ -53,6 +57,13 @@ public enum Side {
 
     /** Return the standard column number for square (C, R) on a board
      *  of size SIZE oriented with this Side on top. */
+    /**
+     *
+     * @param c
+     * @param r
+     * @param size
+     * @return 返回面向Side方向上板子的标准列号
+     */
     public int col(int c, int r, int size) {
         return col0 * (size - 1) + c * drow + r * dcol;
     }
